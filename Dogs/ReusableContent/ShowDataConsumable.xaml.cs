@@ -13,30 +13,32 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Dog.Models;
-using DogApi;
-using Dogs.ReusableContent;
 
-namespace Dogs
+namespace Dogs.ReusableContent
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for ShowDataConsumable.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class ShowDataConsumable : UserControl
     {
-        List<Breed> data;
-        public MainWindow()
+        private Breed _breed;
+        public ShowDataConsumable(Breed breed)
         {
             InitializeComponent();
+            _breed = breed;
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            data = API.GetData();
-            foreach(var item in data)
-            {
-                Dock.Children.Add(new ShowDataConsumable(item));
-            }
-            
+            PictureBox.Source = new BitmapImage(new Uri($"{_breed.image.url}")); ;
+            BreedName.Text = _breed.name;
+            Bred.Text = _breed.bred_for;
+            Origin.Text = _breed.origin;
+        }
+
+        private void btnDetails_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Hello");
         }
     }
 }
