@@ -30,7 +30,7 @@ namespace Dogs.ReusableContent
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            PictureBox.Source = new BitmapImage(new Uri($"{_breed.image.url}")); ;
+            PictureBox.Source = new BitmapImage(new Uri($"{_breed.image.url}"));
             BreedName.Text = _breed.name;
             Bred.Text = _breed.bred_for;
             Origin.Text = _breed.origin;
@@ -38,7 +38,8 @@ namespace Dogs.ReusableContent
 
         private void btnDetails_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Hello");
+            BreedDetails details = new BreedDetails(_breed);
+            details.ShowDialog();
         }
     }
 }

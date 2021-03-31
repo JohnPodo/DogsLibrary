@@ -10,37 +10,30 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Dog.Models;
-using DogApi;
-using Dogs.ReusableContent;
-using Dogs.Services;
 
-namespace Dogs
+namespace Dogs.ReusableContent
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for BreedDetails.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class BreedDetails : Window
     {
-        List<Breed> data;
-        List<Breed> filteredData;
-        DataAndFilters service;
-        public MainWindow()
+        Breed dog;
+        public BreedDetails(Breed data)
         {
             InitializeComponent();
-            service = new DataAndFilters();
+            dog = data;
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            data = API.GetData();
-            filteredData = data;
-            service.PopulateStackPanel(filteredData, Dock);
-            
+            BreedName.Text = dog.name;
+            Origin.Text = dog.origin;
+            CodeCountry.Text = dog.country_code;
+            Pic.Source= new BitmapImage(new Uri($"{dog.image.url}"));
+            LifeSpan.Text = dog.life_span;
         }
-
-
     }
 }

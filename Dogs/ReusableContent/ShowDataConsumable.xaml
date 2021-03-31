@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Dogs.ReusableContent"
-        mc:Ignorable="d" Height="120" Width="1000" Loaded="Window_Loaded" RenderTransformOrigin="0.5,0.5" FontStretch="Expanded">
+        mc:Ignorable="d" Height="120" Width="1000" Loaded="Window_Loaded" RenderTransformOrigin="0.5,0.5" FontStretch="Expanded" Margin="0,10,0,0">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="200"></ColumnDefinition>

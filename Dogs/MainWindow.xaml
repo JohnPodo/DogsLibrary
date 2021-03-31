@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Dogs"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="1200" Loaded="Window_Loaded">
+        Title="MainWindow" Height="800" Width="1200" Loaded="Window_Loaded" Margin="0">
     <Grid  x:Name="Grid">
-        <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="80,40,0,0">
             <WrapPanel x:Name="Dock">
             </WrapPanel>
         </ScrollViewer>

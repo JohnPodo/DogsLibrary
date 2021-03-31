@@ -55,9 +55,13 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ReusableContent\BreedDetails.xaml.cs">
+      <DependentUpon>BreedDetails.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ReusableContent\ShowDataConsumable.xaml.cs">
       <DependentUpon>ShowDataConsumable.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Services\DataAndFilters.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -70,6 +74,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="ReusableContent\BreedDetails.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ReusableContent\ShowDataConsumable.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
