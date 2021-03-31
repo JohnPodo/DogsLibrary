@@ -5,81 +5,153 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Dogs.ReusableContent"
         mc:Ignorable="d"
-        Title="BreedDetails" Height="1200" Width="1500" Padding="10" WindowStyle="ToolWindow" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
+        Title="BreedDetails" Height="800" Width="720" Padding="10" WindowStyle="ToolWindow" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
     <Window.Background>
         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
             <GradientStop Color="Black" Offset="0"/>
             <GradientStop Color="#FF595A5C" Offset="1"/>
         </LinearGradientBrush>
     </Window.Background>
-    <Grid Margin="10" >
+    <Grid >
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="150"></ColumnDefinition>
-            <ColumnDefinition Width="150"></ColumnDefinition>
-            <ColumnDefinition Width="150"></ColumnDefinition>
-            <ColumnDefinition Width="150"></ColumnDefinition>
-            <ColumnDefinition Width="150"></ColumnDefinition>
-            <ColumnDefinition Width="150"></ColumnDefinition>
-            <ColumnDefinition Width="150"></ColumnDefinition>
-            <ColumnDefinition Width="150"></ColumnDefinition>
-            <ColumnDefinition Width="150"></ColumnDefinition>
-            <ColumnDefinition Width="150"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="50"></ColumnDefinition>
+            <ColumnDefinition Width="50"></ColumnDefinition>
+            <ColumnDefinition Width="50"></ColumnDefinition>
+            <ColumnDefinition Width="50"></ColumnDefinition>
+            <ColumnDefinition Width="50"></ColumnDefinition>
+            <ColumnDefinition Width="50"></ColumnDefinition>
+            <ColumnDefinition Width="50"></ColumnDefinition>
+            <ColumnDefinition Width="50"></ColumnDefinition>
+            <ColumnDefinition Width="50"></ColumnDefinition>
+            <ColumnDefinition Width="50"></ColumnDefinition>
+            <ColumnDefinition Width="50"></ColumnDefinition>
+            <ColumnDefinition Width="50"></ColumnDefinition>
+            <ColumnDefinition Width="50"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="100"></RowDefinition>
-            <RowDefinition Height="100"></RowDefinition>
-            <RowDefinition Height="100"></RowDefinition>
-            <RowDefinition Height="100"></RowDefinition>
-            <RowDefinition Height="100"></RowDefinition>
-            <RowDefinition Height="100"></RowDefinition>
-            <RowDefinition Height="100"></RowDefinition>
-            <RowDefinition Height="100"></RowDefinition>
-            <RowDefinition Height="100"></RowDefinition>
-            <RowDefinition Height="100"></RowDefinition>
-            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            
         </Grid.RowDefinitions>
 
-        <Image x:Name="Pic" Grid.Column="1" Grid.ColumnSpan="3" 
-               Grid.Row="1" Grid.RowSpan="4"
+        <Image x:Name="Pic" Grid.Column="1" Grid.ColumnSpan="4" 
+               Grid.Row="1" Grid.RowSpan="5"
                Stretch="Fill"></Image>
         <Label x:Name="NameLabel" Grid.Row="1" 
-               Grid.Column="5"
+               Grid.Column="5" Grid.ColumnSpan="3"
                HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" FontFamily="Book Antiqua"
                Content="Breed Name" Foreground="White"
                ></Label>
         <TextBlock x:Name="BreedName" Grid.Row="1" 
-               Grid.Column="6" Grid.ColumnSpan="3" 
+               Grid.Column="8" Grid.ColumnSpan="6" 
                Padding="10,0,0,0" HorizontalAlignment="Center" 
                VerticalAlignment="Center" FontSize="24" 
-               FontFamily="Calibri" Foreground="#FFE2D8D8">
+               FontFamily="Calibri" Foreground="#FFE2D8D8" TextWrapping="WrapWithOverflow">
         </TextBlock>
         <Label x:Name="OriginLabel" Grid.Row="2" 
-               Grid.Column="5"
+               Grid.Column="5" Grid.ColumnSpan="3"
                HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" FontFamily="Book Antiqua"
                Content="Origin" Foreground="White"
                ></Label>
         <TextBlock x:Name="Origin" Grid.Row="2" 
-               Grid.Column="6" Grid.ColumnSpan="3" 
+               Grid.Column="8" Grid.ColumnSpan="6" 
                Padding="10,0,0,0" HorizontalAlignment="Center" 
                VerticalAlignment="Center" FontSize="24" 
                FontFamily="Calibri" Foreground="#FFE2D8D8">
         </TextBlock>
-        <TextBlock x:Name="CodeCountry" Grid.Row="3" 
-               Grid.Column="6" Grid.ColumnSpan="3" 
-               Padding="10,0,0,0" HorizontalAlignment="Center" 
-               VerticalAlignment="Center" FontSize="24" 
-               FontFamily="Calibri" Foreground="#FFE2D8D8">
-        </TextBlock>
-        <Label x:Name="LifeLabel" Grid.Row="4" 
-               Grid.Column="5"
+        <Label x:Name="LifeLabel" Grid.Row="3" 
+               Grid.Column="5" Grid.ColumnSpan="3"
                HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" FontFamily="Book Antiqua"
                Content="Life Span" Foreground="White"
                ></Label>
-        <TextBlock x:Name="LifeSpan" Grid.Row="4" 
-               Grid.Column="6" Grid.ColumnSpan="3" 
+        <TextBlock x:Name="LifeSpan" Grid.Row="3" 
+               Grid.Column="8" Grid.ColumnSpan="6" 
                Padding="10,0,0,0" HorizontalAlignment="Center" 
                VerticalAlignment="Center" FontSize="24" 
                FontFamily="Calibri" Foreground="#FFE2D8D8">
+        </TextBlock>
+        <Label x:Name="BredForLabel" Grid.Row="4" 
+               Grid.Column="5" Grid.ColumnSpan="3"
+               HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" FontFamily="Book Antiqua"
+               Content="Bred For" Foreground="White"
+               ></Label>
+        <TextBlock x:Name="BredFor" Grid.Row="4" 
+               Grid.Column="8" Grid.ColumnSpan="6" 
+               Padding="10,0,0,0" HorizontalAlignment="Center" 
+               VerticalAlignment="Center" FontSize="24" 
+               FontFamily="Calibri" Foreground="#FFE2D8D8">
+        </TextBlock>
+        <Label x:Name="BredGroupLabel" Grid.Row="5" 
+               Grid.Column="5" Grid.ColumnSpan="3"
+               HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" FontFamily="Book Antiqua"
+               Content="Breed Group" Foreground="White"
+               ></Label>
+        <TextBlock x:Name="BredGroup" Grid.Row="5" 
+               Grid.Column="8" Grid.ColumnSpan="6" 
+               Padding="10,0,0,0" HorizontalAlignment="Center" 
+               VerticalAlignment="Center" FontSize="24" 
+               FontFamily="Calibri" Foreground="#FFE2D8D8">
+        </TextBlock>
+        <Label x:Name="DescriptionLabel" Grid.Row="6" 
+               Grid.Column="1" Grid.ColumnSpan="6"
+               HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" FontFamily="Book Antiqua"
+               Content="Description" Foreground="White"
+               ></Label>
+        <Label x:Name="HistoryLabel" Grid.Row="6" 
+               Grid.Column="7" Grid.ColumnSpan="7"
+               HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" FontFamily="Book Antiqua"
+               Content="History" Foreground="White"
+               ></Label>
+        <TextBlock x:Name="History" Grid.Row="7" Grid.RowSpan="3"
+               Grid.Column="7" Grid.ColumnSpan="7" 
+               Padding="10,0,0,0" HorizontalAlignment="Center" 
+               VerticalAlignment="Center" FontSize="24" 
+               FontFamily="Calibri" Foreground="#FFE2D8D8" TextWrapping="WrapWithOverflow">
+        </TextBlock>
+        <TextBlock x:Name="Desctioption" Grid.Row="7" Grid.RowSpan="3"
+               Grid.Column="1" Grid.ColumnSpan="7" 
+               Padding="10,0,0,0" HorizontalAlignment="Center" 
+               VerticalAlignment="Center" FontSize="24" 
+               FontFamily="Calibri" Foreground="#FFE2D8D8" TextWrapping="WrapWithOverflow">
+        </TextBlock>
+        <Label x:Name="WeightLabel" Grid.Row="11" 
+               Grid.Column="1" Grid.ColumnSpan="6"
+               HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" FontFamily="Book Antiqua"
+               Content="Weight" Foreground="White"
+               ></Label>
+        <Label x:Name="HeightLabel" Grid.Row="11" 
+               Grid.Column="7" Grid.ColumnSpan="7"
+               HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" FontFamily="Book Antiqua"
+               Content="Height" Foreground="White"
+               ></Label>
+        <TextBlock x:Name="Weight" Grid.Row="12" Grid.RowSpan="3"
+               Grid.Column="7" Grid.ColumnSpan="7" 
+               Padding="10,0,0,0" HorizontalAlignment="Center" 
+               VerticalAlignment="Center" FontSize="24" 
+               FontFamily="Calibri" Foreground="#FFE2D8D8" TextWrapping="WrapWithOverflow">
+        </TextBlock>
+        <TextBlock x:Name="Height" Grid.Row="12" Grid.RowSpan="3"
+               Grid.Column="1" Grid.ColumnSpan="7" 
+               Padding="10,0,0,0" HorizontalAlignment="Center" 
+               VerticalAlignment="Center" FontSize="24" 
+               FontFamily="Calibri" Foreground="#FFE2D8D8" TextWrapping="WrapWithOverflow">
         </TextBlock>
     </Grid>
 </Window>

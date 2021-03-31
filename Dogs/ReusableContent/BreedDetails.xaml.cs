@@ -30,10 +30,15 @@ namespace Dogs.ReusableContent
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             BreedName.Text = dog.name;
-            Origin.Text = dog.origin;
-            CodeCountry.Text = dog.country_code;
+            Origin.Text = (!string.IsNullOrEmpty(dog.origin))? dog.origin:dog.country_code;
             Pic.Source= new BitmapImage(new Uri($"{dog.image.url}"));
             LifeSpan.Text = dog.life_span;
+            BredFor.Text = dog.bred_for;
+            BredGroup.Text = dog.breed_group;
+            Desctioption.Text = (!string.IsNullOrEmpty(dog.description))? dog.description:dog.temperament;
+            History.Text = dog.history;
+            Weight.Text = dog.weight.metric + " Kilos";
+            Height.Text = dog.height.metric + " Centimeters";
         }
     }
 }

@@ -32,8 +32,8 @@ namespace Dogs.ReusableContent
         {
             PictureBox.Source = new BitmapImage(new Uri($"{_breed.image.url}"));
             BreedName.Text = _breed.name;
-            Bred.Text = _breed.bred_for;
-            Origin.Text = _breed.origin;
+            Bred.Text = _breed.breed_group;
+            Origin.Text =(!string.IsNullOrEmpty(_breed.origin)) ? _breed.origin : _breed.country_code; ;
         }
 
         private void btnDetails_Click(object sender, RoutedEventArgs e)
