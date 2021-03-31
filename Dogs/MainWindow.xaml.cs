@@ -37,10 +37,22 @@ namespace Dogs
         {
             data = API.GetData();
             filteredData = data;
-            service.PopulateStackPanel(filteredData, Dock);
-            
+            service.PopulatePanel(filteredData, Dock);
+            service.PopulateSearchField(filteredData, SearchNameBox);
         }
 
+        private void searchNamebtn_Click(object sender, RoutedEventArgs e)
+        {
+            service.FilterDataByName(filteredData, SearchNameBox.Text, Dock);
 
+
+        }
+
+        private void resetbtn_Click(object sender, RoutedEventArgs e)
+        {
+            filteredData = data;
+            SearchNameBox.Text = "";
+            service.PopulatePanel(filteredData, Dock);
+        }
     }
 }
